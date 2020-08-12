@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import Output from './components/Output';
+import Text from './components/Controls/Text';
 import axios from 'axios';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      paras: 4,
-      text: ''
+      paras: 4
     }
   }
 
@@ -29,11 +29,26 @@ class App extends Component {
       });
   }
 
+
+  changeParas(number) {
+    this.setState({paras: number}, this.getSampleText());
+  }
+
   render() {
     return(
-      <div className="App">
+      <div className="App container">
+      <h1 className="text-center">Text Generator</h1>
+      <hr/>
+      <form className="form-inline">
+      <div className="form-group">
+        <label>Paragraphs: </label>
+        <Text value={this.state.paras} onChange={this.changeParas.bind(this)}/>
+      </div>
+
+      </form>
+
+      <br/><br/>
       <Output value={this.state.text} />
-       
       </div>
     )
   }

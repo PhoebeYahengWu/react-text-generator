@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      paras: 4
+      paras: 1
     }
   }
 

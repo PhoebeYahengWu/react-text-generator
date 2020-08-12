@@ -18,7 +18,7 @@ class Text extends Component {
     render() {
         return (
             <div>
-            <input className="form-control ml-2" type="number" value={this.state.value} onChange={this.onChange.bind(this)}/>
+            <input className="form-control ml-2" type="number" min="1" max="100" value={this.state.value} onChange={this.onChange.bind(this)}/>
             </div>
         )
     }

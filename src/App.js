@@ -37,7 +37,7 @@ class App extends Component {
   render() {
     return(
       <div className="App container">
-      <h1 className="text-center">Text Generator</h1>
+      <h1 className="text-center mt-3">Text Generator</h1>
       <hr/>
       <form className="form-inline">
       <div className="form-group">
